@@ -1,0 +1,138 @@
+.header {
+  // --bg-text: #fff;
+  background-color: var(--bg);
+  color: var(--bg-text);
+  height: var(--header);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  // box-shadow: 0 0 15px #000, inset 0 -2px 5px #000;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__menu-btn {
+    z-index: 11;
+    // .menu-btn {
+    //   .hamburger input:checked+svg>.line {
+    //     // stroke: lightblue;
+    //   }
+    // }
+  }
+
+  &__logo {
+    max-width: 50px;
+    max-height: 50px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .nav {
+    background-color: var(--bg);
+    transition-duration: 0.3s;
+    transition-property: transform, opacity;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    width: 60%;
+    height: 100%;
+    opacity: 0;
+
+    &__box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+
+    &__list {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+
+    &__item a {
+      display: inline-block;
+      position: relative;
+      text-decoration: none;
+      padding: 11px 0;
+      font-size: 20px;
+      color: var(--bg-text);
+      transition: all .3s;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        transform: scaleX(0);
+        background-color: var(--bg);
+        transition: transform 0.3s;
+      }
+    }
+
+    // &__item._active a:after {
+    //   transform: scaleX(1);
+    // }
+
+    &__item._active {
+      & a {
+        color: var(--active);
+      }
+      & a:after {
+        transform: scale(1);
+        background-color: var(--active);
+      }
+    }
+  }
+
+  .nav._show {
+    z-index: 11;
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    z-index: 2;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    &._show {
+      display: block;
+    }
+  }
+
+}

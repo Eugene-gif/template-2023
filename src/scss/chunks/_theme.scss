@@ -1,0 +1,44 @@
+
+body {
+
+  .header {
+    --bg: #15665d;
+    --bg-text: #f7e0be;
+    --active: #d0ce43;
+  }
+
+  .base-layout {
+    --bg: linear-gradient(to top, #15665d, #5dbca7);
+    background: var(--bg);
+    color: var(--bg-text);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: var(--bg-text1);
+    }
+  }
+
+  .footer {
+    --bg: #5dbca7;
+    --bg-text: #17665e;
+  }
+}
+
+.dark {
+  .header {
+    --bg: #1B1641;
+  }
+
+  .base-layout {
+    --bg: black;
+    --bg-text: #fff;
+  }
+
+  .footer {
+    --bg: #133439;
+    --bg-text: #ffffff70;
+  }
+}
