@@ -10,18 +10,18 @@
 </head>
 
 <body>
-  <load="/src/layouts/header.html" />
+  <div class="mask">
+    <div class="loader"></div>
+  </div>
+  <load="/src/layouts/Header/header.html" />
   <main class="base-layout container-fluid">
     <load="/src/pages/home.html" />
     <load="/src/pages/products.html" />
     <load="/src/pages/order.html" />
     <load="/src/pages/delivery.html" />
     <load="/src/pages/contacts.html" />
-    <div class="mask">
-      <div class="loader"></div>
-    </div>
   </main>
-  <load="/src/layouts/footer.html" />
+  <load="/src/layouts/Footer/footer.html" />
   <script type="module" src="main.js"></script>
 </body>
 

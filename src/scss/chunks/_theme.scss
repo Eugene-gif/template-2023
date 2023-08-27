@@ -1,4 +1,3 @@
-
 body {
 
   .header {
@@ -28,17 +27,29 @@ body {
 }
 
 .dark {
+
   .header {
-    --bg: #1B1641;
+    --bg: #312a3f;
+    --bg-text: #d2cfd7;
+    --active: #a08fd1;
   }
 
   .base-layout {
-    --bg: black;
-    --bg-text: #fff;
+    --bg: #242424; // этот
+    --bg-text: #d2cfd7;
+    --bg-text1: #a08fd1;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: var(--bg-text1);
+    }
   }
 
   .footer {
-    --bg: #133439;
-    --bg-text: #ffffff70;
+    --bg: #4A4453;
+    --bg-text: #AFA8BA;
   }
 }

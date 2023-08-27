@@ -1,5 +1,4 @@
 .header {
-  // --bg-text: #fff;
   background-color: var(--bg);
   color: var(--bg-text);
   height: var(--header);
@@ -9,7 +8,6 @@
   left: 0;
   right: 0;
   z-index: 1;
-  // box-shadow: 0 0 15px #000, inset 0 -2px 5px #000;
 
   &__content {
     display: flex;
@@ -26,16 +24,12 @@
 
   &__menu-btn {
     z-index: 11;
-    // .menu-btn {
-    //   .hamburger input:checked+svg>.line {
-    //     // stroke: lightblue;
-    //   }
-    // }
   }
 
   &__logo {
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 45px;
+    max-height: 45px;
+    margin: 10px 0;
 
     img {
       width: 100%;
@@ -49,6 +43,8 @@
     transition-duration: 0.3s;
     transition-property: transform, opacity;
     position: fixed;
+    overflow-y: auto;
+    padding: 20px 0;
     top: 0;
     left: 0;
     transform: translateX(-100%);
@@ -95,14 +91,11 @@
       }
     }
 
-    // &__item._active a:after {
-    //   transform: scaleX(1);
-    // }
-
     &__item._active {
       & a {
         color: var(--active);
       }
+
       & a:after {
         transform: scale(1);
         background-color: var(--active);
@@ -114,6 +107,40 @@
     z-index: 11;
     transform: translateX(0%);
     opacity: 1;
+  }
+
+  @media (min-width: 768px) {
+    .nav {
+      position: static;
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      padding: 0;
+      transform: translateX(0);
+      opacity: 1;
+      gap: 40px;
+      max-width: 85%;
+      width: 85%;
+
+      &__box {
+        padding: 0;
+        order: 1;
+      }
+
+      &__list {
+        margin: 0;
+        flex-direction: row;
+        gap: 25px;
+      }
+
+      &__item a {
+        padding: 19px 0;
+      }
+    }
+
+    .header__box {
+      display: none;
+    }
   }
 
   .overlay {
@@ -130,9 +157,9 @@
     z-index: 2;
     cursor: pointer;
     backdrop-filter: blur(5px);
+
     &._show {
       display: block;
     }
   }
-
 }

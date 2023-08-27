@@ -14,16 +14,13 @@
 
 
 /*__________ Layouts __________*/
-@import "@/layouts/styles/_header.scss";
-@import "@/layouts/styles/_footer.scss";
+@import "@/layouts/Header/_header.scss";
+@import "@/layouts/Footer/_footer.scss";
 
 /*__________ /Layouts __________*/
 
 
 /*__________ Pages __________*/
 @import "@/pages/styles/_home.scss";
-// @import "@/pages/Products/_products.scss";
-// @import "@/pages/Order/_order.scss";
-// @import "@/pages/Delivery/_delivery.scss";
-// @import "@/pages/Contacts/_contacts.scss";
+
 /*__________ /Pages __________*/

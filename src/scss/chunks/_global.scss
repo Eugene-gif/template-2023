@@ -5,21 +5,22 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  // _____ Vars _____
-  --header: 65px;
-  --header-mobile: 45px;
-  //_____
-  --bg: #46b1c9; // #1B4D50
-  --bg-text: #ffffe0d6;
-  --bg-text1: #afdfac;
-  --bg-text2: #a7db98;
-  --active: #d0ce43;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  &::selection {
+    background: var(--bg-text2);
+    color: black;
+  }
+
+  &::-moz-selection {
+    background: var(--bg-text2);
+    color: black;
+  }
 }
 
 ul,
@@ -52,34 +53,32 @@ h5 {
   text-align: center;
   text-wrap: balance;
   line-height: 1.2;
-  // border: 1px solid grey;
 }
 
 h1 {
   font-weight: 800;
-  // font-size: clamp(32px, 3cqi, 54px);
   font-size: clamp(2rem, 1.5417rem + 2.2917vw, 3.375rem);
-  // margin-bottom: 1em;
+  // font-size: clamp(32px, 3cqi, 54px);
 }
 
 h2 {
-  // font-size: clamp(28px, 3cqi, 42px);
   font-size: clamp(1.75rem, 1.4583rem + 1.4583vw, 2.625rem);
+  // font-size: clamp(28px, 3cqi, 42px);
 }
 
 h3 {
-  // font-size: clamp(24px, 3cqi, 36px);
   font-size: clamp(1.5rem, 1.25rem + 1.25vw, 2.25rem);
+  // font-size: clamp(24px, 3cqi, 36px);
 }
 
 h4 {
-  // font-size: clamp(20px, 3cqi, 28px);
   font-size: clamp(1.25rem, 1.0833rem + 0.8333vw, 1.75rem);
+  // font-size: clamp(20px, 3cqi, 28px);
 }
 
 h5 {
-  // font-size: clamp(18px, 3cqi, 24px);
   font-size: clamp(1.125rem, 1rem + 0.625vw, 1.5rem);
+  // font-size: clamp(18px, 3cqi, 24px);
 }
 
 p {
@@ -111,7 +110,3 @@ p {
 ::-webkit-scrollbar-thumb {
   border-radius: 1rem;
 }
-
-// ::-webkit-scrollbar-thumb:hover {
-// background-color: rgb(244, 212, 217);
-// }
