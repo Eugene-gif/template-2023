@@ -86,20 +86,20 @@ p {
   font-size: clamp(0.875rem, 0.7917rem + 0.4167vw, 1.125rem);
 }
 
+.base-layout {
+  margin-top: var(--header);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .container {
-  max-width: 1280px;
+  max-width: 1360px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
 .container-fluid {
   width: 100vw;
-}
-
-.base-layout {
-  margin-top: var(--header);
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 ::-webkit-scrollbar {
